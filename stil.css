@@ -1,0 +1,33 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    /* Centrira blok kad ima slobodnog prostora */
+    padding: 0 16px;
+    /* Ostavlja unutarnji razmak lijevo i desno */
+
+ background-image: url("slike/pozadina-parkovi.png");
+   
+    background-position: center;  /* Centrira pozadinsku sliku */
+    background-attachment: fixed; /* Slika ostaje na istom mjestu u prozoru dok pomičeš stranicu */
+}
+
+h1 {
+    color: darkgreen;
+    text-align: center;
+}
+
+a {
+    color: darkgreen;
+}
+
+a:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+img {
+    max-width: 95%;
+    height: auto;
+    border: 5px solid #ccc;
+}

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregled parkova</title>
+
+    <link rel="stylesheet" href="stil.css">
 </head>
 
 <body>
@@ -37,7 +39,7 @@
 
 
     <table>
-         <caption>Aktivnosti po parkovima</caption>
+        <caption>Aktivnosti po parkovima</caption>
         <thead>
             <tr>
                 <th>Park</th>
@@ -55,6 +57,75 @@
             </tr>
         </tbody>
     </table>
+
+    <h2>Dodaj park</h2>
+
+    <form>
+
+        <input type="hidden" name="vrstaZapisa" value="park">
+
+        <label for="naziv">Naziv parka:</label>
+        <input type="text" id="naziv" name="naziv" required>
+
+        <p>
+            <label for="cijena">Cijena ulaznice u eurima:</label>
+            <input type="number" id="cijena" name="cijena" min="0" max="200" step="0.01" required>
+        </p>
+
+        <p>
+            <label for="vrijediDo">Cijena vrijedi do:</label>
+            <input type="date" id="vrijediDo" name="vrijediDo" required>
+        </p>
+
+        <p>
+            <input type="checkbox" id="kampiranje" name="kampiranje" value="da">
+            <label for="kampiranje">Kampiranje je dopušteno</label>
+        </p>
+
+        <p>
+            <label for="fotografija">Fotografija parka:</label>
+            <input type="file" id="fotografija" name="fotografija">
+        </p>
+
+        <p>Vrsta zaštićenog područja:</p>
+
+        <p>
+            <input type="radio" id="nacionalni" name="vrstaPodrucja" value="nacionalni" required>
+            <label for="nacionalni">Nacionalni park</label>
+        </p>
+
+        <p>
+            <input type="radio" id="rezervat" name="vrstaPodrucja" value="rezervat">
+            <label for="rezervat">Prirodni rezervat</label>
+        </p>
+
+        <p>
+            <label for="kontinent">Kontinent:</label>
+            <select id="kontinent" name="kontinent" required>
+                <option value="">Odaberi kontinent</option>
+                <option value="europa">Europa</option>
+                <option value="afrika">Afrika</option>
+            </select>
+        </p>
+        <p>
+            <label for="drzava">Država:</label>
+            <select id="drzava" name="drzava" required disabled>
+                <option value="">Prvo odaberi kontinent</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="trajanje">Preporučeno trajanje posjeta (1–8 sati):</label>
+            <input type="range" id="trajanje" name="trajanje" min="1" max="8" step="1" value="3">
+        </p>
+
+        <p>
+            <label for="boja">Boja oznake parka:</label>
+            <input type="color" id="boja" name="boja" value="#008000">
+        </p>
+
+        <input type="submit" value="Dodaj park">
+    </form>
 
     <a href="index.html">Povratak na početnu</a>
 </body>
